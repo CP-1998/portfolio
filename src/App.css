@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .container div {
+    position: absolute;
+    border-radius: 3rem;
+    animation: gradient 4s infinite;
+  }
+  
+  @keyframes gradient {
+    50% {
+      transform: scale(1.3) translate(100px);
+    }
+  }
+  
+  .container div:nth-child(1) {
+    height: 100%;
+    width: 100%;
+    background-color: #ff057c;
+  }
+  
+  .container div:nth-child(2) {
+    height: 80%;
+    width: 70%;
+    background-color: #900977;
+    top: -12%;
+    right: -12%;
+    animation-delay: 2s;
+  }
+  
+  .container div:nth-child(3) {
+    height: 50%;
+    width: 75%;
+    background-color: #1215dd;
+    bottom: -10%;
+    left: -5%;
+    animation-delay: 1s;
+  }
+  
+  .container div:nth-child(4) {
+    height: 65%;
+    width: 80%;
+    background-color: #13d6da;
+    bottom: -15%;
+    right: -20%;
+    animation-delay: 3s;
+  }
+  
+  .container div:nth-child(5) {
+    height: 70%;
+    width: 65%;
+    background-color: #fa8e28;
+    bottom: 0;
+    right: -50%;
+    animation-delay: 1s;
+  }
+  
+  .container::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(200px);
+    z-index: 1; 
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    pointer-events: none; 
+  }
+  
+  .hello {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    opacity: 0;
+    animation: fade 4s linear 2 forwards;
+    font-family: "Josefin Sans", serif;
+  }
+  
+  @keyframes fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  
