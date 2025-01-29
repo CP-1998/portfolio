@@ -113,4 +113,9 @@
       opacity: 1;
     }
   }
+
+  .progress-bar {
+    background-color: #ff057c;
+    height: 8px;
+  }
   

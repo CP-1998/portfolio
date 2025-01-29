@@ -1,9 +1,10 @@
 import './App.css';
-import ProgressBar from './components/progress-bar.component.js';
+import Spinner from './components/spinner';
 import React, { useState, useEffect } from 'react';
 
 function App() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [percentWatch, setPercentWatch] = useState(0);
   const phrases = [
     "Looking for a skilled full-stack web developer?",
     "You just found one."
@@ -23,9 +24,20 @@ function App() {
         content.remove();
       }
     }, 9000);
-
-
     return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    async function updatePercent() {
+      for (let i = 0; i <= 100; i++) {
+        await sleep(50); // Adjust the delay as needed
+        setPercentWatch(i);
+      }
+    }
+
+    updatePercent();
   }, []);
 
   return (
@@ -40,10 +52,12 @@ function App() {
 
       <div className="content">
         <div>
+          <p>{percentWatch}%</p>
+          <Spinner />
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
       </div>
-    </div >
+    </div>
   );
 }
 
