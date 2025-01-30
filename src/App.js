@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     async function updatePercent() {
-      await sleep(8000);
+      await sleep(8400);
       setPercentBool(true);
       for (let i = 0; i <= 100; i++) {
         await sleep(70);
