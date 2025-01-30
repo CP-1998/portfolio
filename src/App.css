@@ -113,9 +113,12 @@
       opacity: 1;
     }
   }
-
-  .progress-bar {
-    background-color: #ff057c;
-    height: 8px;
-  }
   
+  .percentWatch {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    justify-content: center;
+    font-family: "Josefin Sans", serif;
+    display: flex;
+    animation: fade 8s linear forwards;
+  }

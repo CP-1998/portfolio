@@ -9,11 +9,12 @@ function App() {
     "Looking for a skilled full-stack web developer?",
     "You just found one."
   ];
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 4500);
+    }, 4000);
     return () => clearInterval(interval);
   }, [phrases.length]);
 
@@ -23,22 +24,31 @@ function App() {
       if (content) {
         content.remove();
       }
-    }, 9000);
+    }, 8000);
     return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-
     async function updatePercent() {
+      await sleep(8000);
       for (let i = 0; i <= 100; i++) {
-        await sleep(50); // Adjust the delay as needed
+        await sleep(70);
         setPercentWatch(i);
-      }
-    }
+      };
+    };
 
     updatePercent();
   }, []);
+
+  useEffect(() => {
+    const helloElement = document.getElementById('destructibleHello');
+    if (helloElement) {
+      helloElement.classList.remove('hello');
+      // Trigger reflow to restart the animation
+      void helloElement.offsetWidth;
+      helloElement.classList.add('hello');
+    }
+  }, [currentPhraseIndex]);
 
   return (
     <div className="App">
@@ -52,7 +62,7 @@ function App() {
 
       <div className="content">
         <div>
-          <p>{percentWatch}%</p>
+          <p className="percentWatch" id="percentElem">{percentWatch}%</p>
           <Spinner />
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
