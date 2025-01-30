@@ -7,17 +7,9 @@ To anyone viewing this project, please feel free to clone and use as you need, o
 Never stop learning, never quit no matter hard it gets, and give yourself the space and time to become a truly great developer! It doesn't happen overnight, it takes many many hours of spinning your wheels, being frustrated and starting over when your design got ahead of your head. 
 
 I appreciate your visit here, I hope you find something valuable within this code, and  don't be a stranger! I am totally open to pull requests and collaboration.
-
-
-
-
-
-
-
-
-
-
-
+#
+#
+#
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
