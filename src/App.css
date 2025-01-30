@@ -121,4 +121,5 @@
     font-family: "Josefin Sans", serif;
     display: flex;
     animation: fade 10s linear forwards;
+    font-weight: 700;
   }
