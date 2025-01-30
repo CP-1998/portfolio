@@ -12,16 +12,9 @@ function Spinner() {
 
         return () => clearTimeout(timerStart);
     }, []);
-    /*useEffect(() => {
-        const timerStart = setTimeout(() => {
-            setLoading(false);
-        }, 16000); // Adjust the timeout duration as needed
-
-        return () => clearTimeout(timerStart);
-    }, []);*/
 
     const override: CSSProperties = {
-        animation: 'react-spinners-ClipLoader-clip 3s linear infinite normal, fadeIn 9s linear forwards',
+        animation: 'react-spinners-ClipLoader-clip 3s linear infinite normal, fadeIn 8s linear forwards',
         borderColor: 'rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) transparent',
         width: '150px',
         height: '150px',

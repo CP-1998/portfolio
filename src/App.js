@@ -10,6 +10,7 @@ function App() {
     "You just found one."
   ];
   const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const [percentBool, setPercentBool] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,6 +32,7 @@ function App() {
   useEffect(() => {
     async function updatePercent() {
       await sleep(8000);
+      setPercentBool(true);
       for (let i = 0; i <= 100; i++) {
         await sleep(70);
         setPercentWatch(i);
@@ -62,7 +64,8 @@ function App() {
 
       <div className="content">
         <div>
-          <p className="percentWatch" id="percentElem">{percentWatch}%</p>
+          {percentBool && <p className="percentWatch" id="percentElem">{percentWatch}%</p>}
+          <br></br>
           <Spinner />
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
