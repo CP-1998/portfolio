@@ -1,0 +1,28 @@
+.powershell {
+    width: 5%;
+    height: 5%;
+}
+
+.powerWord {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    position: flex;
+    justify-content: center;
+}
+.kali {
+    width: 26%;
+    height: 26%;
+    position: flex;
+}
+
+.mac {
+    width: 26%;
+    height: 26%;
+}
+
+.zsh {
+    width: 21%;
+    height: 21%;
+}

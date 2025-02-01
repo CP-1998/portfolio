@@ -1,6 +1,8 @@
 import './App.css';
 import Spinner from './components/spinner';
+import './components/animatedLangs';
 import React, { useState, useEffect } from 'react';
+import AnimatedLangs from './components/animatedLangs';
 
 function App() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -11,6 +13,7 @@ function App() {
   ];
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const [percentBool, setPercentBool] = useState(false);
+  const [spinningTrue, setSpinningTrue] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,10 +46,18 @@ function App() {
   }, []);
 
   useEffect(() => {
+    async function destroyLoading() {
+      await sleep(18500);
+      setPercentBool(false);
+      setSpinningTrue(false);
+    };
+    destroyLoading();
+  }, [percentBool]);
+
+  useEffect(() => {
     const helloElement = document.getElementById('destructibleHello');
     if (helloElement) {
       helloElement.classList.remove('hello');
-      // Trigger reflow to restart the animation
       void helloElement.offsetWidth;
       helloElement.classList.add('hello');
     }
@@ -65,8 +76,8 @@ function App() {
       <div className="content">
         <div>
           {percentBool && <p className="percentWatch" id="percentElem">{percentWatch}%</p>}
-          <br></br>
-          <Spinner />
+          {spinningTrue && <Spinner id="spinnerObj"/>}
+          <AnimatedLangs />
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
       </div>
