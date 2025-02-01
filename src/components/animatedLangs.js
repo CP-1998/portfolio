@@ -19,36 +19,40 @@ import "./animatedLangs.css";
 
 function AnimatedLangs() {
     return (
-        <div className="langContainer">
-            {/*Operating Systems*/}
-            <div className="mac">
-                <img src={mac} alt="mac" className="mac" />
-                <p className="powerWord">Mac</p>
-            </div>
-            <div className="ubuntu">
-                <img src={ubuntu} alt="ubuntu" className="ubuntu" />
-                <p className="powerWord">Ubuntu</p>
-            </div>
-            <div className="kali">
-                <img src={kali} alt="kali" className="kali" />
-                <p className="powerWord">Kali</p>
-            </div>
-            <div className="windows">
-                <img src={windows} alt="windows" className="windows" />
-                <p className="powerWord">Windows</p>
+        <div>
+            <div className="osContainer">
+                {/*Operating Systems*/}
+                <div className="osSub">
+                    <img src={mac} alt="mac" className="mac" />
+                    <p className="powerWord">Mac</p>
+                </div>
+                <div className="osSub">
+                    <img src={ubuntu} alt="ubuntu" className="ubuntu" />
+                    <p className="powerWord">Ubuntu</p>
+                </div>
+                <div className="osSub">
+                    <img src={kali} alt="kali" className="kali" />
+                    <p className="powerWord">Kali</p>
+                </div>
+                <div className="osSub">
+                    <img src={windows} alt="windows" className="windows" />
+                    <p className="powerWord">Windows</p>
+                </div>
             </div>
             {/*Command Line Interfaces*/}
-            <div className="git">
-                <img src={git} alt="git" className="git" />
-                <p className="powerWord">Git Bash</p>
-            </div>
-            <div className="ps1">
-                <img src={powershell} alt="powershell" className="powershell" />
-                <p className="powerWord">Powershell</p>
-            </div>
-            <div className="zsh">
-                <img src={zsh} alt="zsh" className="zsh" />
-                <p className="powerWord">Zsh</p>
+            <div className="cliContainer">
+                <div className="cliSub">
+                    <img src={git} alt="git" className="git" />
+                    <p className="powerWord">Git Bash</p>
+                </div>
+                <div className="cliSub">
+                    <img src={powershell} alt="powershell" className="powershell" />
+                    <p className="powerWord">Powershell</p>
+                </div>
+                <div className="cliSub">
+                    <img src={zsh} alt="zsh" className="zsh" />
+                    <p className="powerWord">Zsh</p>
+                </div>
             </div>
         </div>
     );
