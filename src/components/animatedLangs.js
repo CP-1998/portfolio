@@ -25,20 +25,20 @@ function AnimatedLangs() {
                 {/*Operating Systems*/}
                 <div className="osSub">
                     <img src={mac} alt="mac" className="mac" />
-                    <p className="osWord">Mac</p>
+                    <p className="macWord">Mac</p>
                 </div>
                 <div className="osSub">
                     <img src={ubuntu} alt="ubuntu" className="ubuntu" />
-                    <p className="osWord">Ubuntu</p>
+                    <p className="ubuWord">Ubuntu</p>
                 </div>
                 <div className="osSub">
                     <img src={fire} alt="fire" className="fire" />
                     <img src={kali} alt="kali" className="kali" />
-                    <p className="osWord">Kali</p>
+                    <p className="kaliWord">Kali</p>
                 </div>
                 <div className="osSub">
                     <img src={windows} alt="windows" className="windows" />
-                    <p className="osWord">Windows</p>
+                    <p className="windowsWord">Windows</p>
                 </div>
             </div>
             {/*Command Line Interfaces*/}
