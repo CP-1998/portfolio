@@ -15,6 +15,7 @@ import vue from "../assets/icons8-vue-js-48.png";
 import mac from "../assets/MacOS_logo.png";
 import windows from "../assets/icons8-windows-48 (1).png";
 import zsh from "../assets/zshPic.png";
+import fire from "../assets/game of thrones fire Sticker by Red Giant.gif";
 import "./animatedLangs.css";
 
 function AnimatedLangs() {
@@ -24,34 +25,35 @@ function AnimatedLangs() {
                 {/*Operating Systems*/}
                 <div className="osSub">
                     <img src={mac} alt="mac" className="mac" />
-                    <p className="powerWord">Mac</p>
+                    <p className="osWord">Mac</p>
                 </div>
                 <div className="osSub">
                     <img src={ubuntu} alt="ubuntu" className="ubuntu" />
-                    <p className="powerWord">Ubuntu</p>
+                    <p className="osWord">Ubuntu</p>
                 </div>
                 <div className="osSub">
+                    <img src={fire} alt="fire" className="fire" />
                     <img src={kali} alt="kali" className="kali" />
-                    <p className="powerWord">Kali</p>
+                    <p className="osWord">Kali</p>
                 </div>
                 <div className="osSub">
                     <img src={windows} alt="windows" className="windows" />
-                    <p className="powerWord">Windows</p>
+                    <p className="osWord">Windows</p>
                 </div>
             </div>
             {/*Command Line Interfaces*/}
             <div className="cliContainer">
                 <div className="cliSub">
                     <img src={git} alt="git" className="git" />
-                    <p className="powerWord">Git Bash</p>
+                    <p className="cliWord">Git Bash.</p>
                 </div>
                 <div className="cliSub">
                     <img src={powershell} alt="powershell" className="powershell" />
-                    <p className="powerWord">Powershell</p>
+                    <p className="cliWord">Powershell.</p>
                 </div>
                 <div className="cliSub">
                     <img src={zsh} alt="zsh" className="zsh" />
-                    <p className="powerWord">Zsh</p>
+                    <p className="cliWord">Zsh.</p>
                 </div>
             </div>
         </div>

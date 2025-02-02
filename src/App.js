@@ -14,6 +14,7 @@ function App() {
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const [percentBool, setPercentBool] = useState(false);
   const [spinningTrue, setSpinningTrue] = useState(true);
+  const [langVis, setLangVis] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,6 +51,8 @@ function App() {
       await sleep(18500);
       setPercentBool(false);
       setSpinningTrue(false);
+      await sleep(1000);
+      setLangVis(true);
     };
     destroyLoading();
   }, [percentBool]);
@@ -77,7 +80,7 @@ function App() {
         <div>
           {percentBool && <p className="percentWatch" id="percentElem">{percentWatch}%</p>}
           {spinningTrue && <Spinner id="spinnerObj"/>}
-          <AnimatedLangs />
+          {langVis && <AnimatedLangs />}
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
       </div>
