@@ -21,6 +21,9 @@ import "./animatedLangs.css";
 function AnimatedLangs() {
     return (
         <div>
+            <div className="osTitleContainer">
+                <p className="osTitle">Operating Systems</p>
+            </div>
             <div className="osContainer">
                 {/*Operating Systems*/}
                 <div className="osSub">
@@ -41,6 +44,9 @@ function AnimatedLangs() {
                     <p className="windowsWord">Windows</p>
                 </div>
             </div>
+            <div className="cliTitleContainer">
+                <p className="cliTitle">Command Line Interfaces</p>
+            </div>
             {/*Command Line Interfaces*/}
             <div className="cliContainer">
                 <div className="cliSub">
@@ -53,9 +59,24 @@ function AnimatedLangs() {
                 </div>
                 <div className="cliSub">
                     <img src={zsh} alt="zsh" className="zsh" />
-                    <p className="cliWord">Zsh.</p>
+                    <p className="cliWord">Zsh. Terminal</p>
                 </div>
             </div>
+            <div className="langTitleContainer">
+                <p className="langTitle">Languages</p>
+            </div>
+            {/*Languages*/}
+            <div className="langContainer">
+                <div className="langSub">
+                    <img src={javaScript} alt="javaScript" className="javaScript" />
+                    <p className="langWord">JavaScript</p>
+                </div>
+                <div className="langSub">
+                    <img src={python} alt="python" className="python" />
+                    <p className="langWord">Python</p>
+                </div>
+            </div>
+
         </div>
     );
 };

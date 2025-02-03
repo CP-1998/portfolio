@@ -20,6 +20,69 @@
     }
 }
 
+.osTitleContainer {
+    top: -17rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.osTitle {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: transparent;
+    text-align: center;
+    margin-top: 0.5rem;
+    background-image: radial-gradient(black, rgb(255, 255, 255), black);
+    background-clip: text;
+    background-size: 1000% 1000%;
+    animation: rainbow 20s linear infinite, fadeLangs 4s linear;
+}
+
+.cliTitleContainer {
+    top: -1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cliTitle {
+    font-family: "Josefin Sans", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: transparent;
+    text-align: center;
+    margin-top: 0.5rem;
+    background-image: radial-gradient(rgb(250, 169, 18), rgb(0, 0, 0), rgb(250, 169, 18));
+    background-clip: text;
+    background-size: 1000% 1000%;
+    animation: rainbow 20s linear infinite, fadeLangs 4s linear;
+}
+
+.langTitleContainer {
+    top: 15rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.langTitle {
+    font-family: "Josefin Sans", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: transparent;
+    text-align: center;
+    margin-top: 0.5rem;
+    background-image: repeating-radial-gradient(rgb(48, 105, 152), rgb(255, 212, 59));
+    background-clip: text;
+    background-size: 1000% 1000%;
+    animation: rainbow 20s linear infinite, fadeLangs 4s linear;
+}
+
 .osSub {
     display: flex;
     flex-direction: column;
@@ -59,7 +122,7 @@
     margin-top: 0.5rem;
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(250, 169, 18), rgb(255, 255, 255));
     background-clip: text;
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     animation: rainbow 3s linear infinite;
 }
 
@@ -72,7 +135,7 @@
     margin-top: 0.5rem;
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(18, 176, 250), rgb(255, 255, 255));
     background-clip: text;
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     animation: rainbow 3s linear infinite;
 }
 
@@ -85,16 +148,14 @@
     margin-top: 0.5rem;
     background-image: linear-gradient(to right, rgb(241, 79, 33), rgb(126, 185, 0), rgb(0, 163, 238), rgb(254, 184, 0));
     background-clip: text;
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     animation: rainbow 3s linear infinite;
 }
 
 @keyframes rainbow {
     0% { background-position: 0% 50%; }
-    25% { background-position: 50% 50%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 50%; }
-    100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .cliWord {
