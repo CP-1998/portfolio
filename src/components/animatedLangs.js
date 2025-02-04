@@ -4,23 +4,25 @@ import airtable from "../assets/airtable_icon.png";
 import gpt from "../assets/icons8-chatgpt-50.png";
 import git from "../assets/icons8-git-48.png";
 import theHub from "../assets/icons8-github-32.png";
-import javaScript from "../assets/icons8-javascript.gif";
+import javaScript from "../assets/icons8-javascript (1).gif";
 import mongo from "../assets/icons8-mongo-db-48.png";
 import node from "../assets/icons8-nodejs-48.png";
-import python from "../assets/icons8-python.gif";
-import reaccion from "../assets/icons8-react.gif";
+import python from "../assets/icons8-python (1).gif";
+import reaccion from "../assets/icons8-react-40.png";
 import ubuntu from "../assets/icons8-ubuntu-48.png";
-import zap from "../assets/zap_icon.png";
+import zap from "../assets/icons8-zapier-100.png";
 import vue from "../assets/icons8-vue-js-48.png";
 import mac from "../assets/MacOS_logo.png";
 import windows from "../assets/icons8-windows-48 (1).png";
 import zsh from "../assets/zshPic.png";
 import fire from "../assets/game of thrones fire Sticker by Red Giant.gif";
+import css from "../assets/icons8-css-48.png";
+import html from "../assets/icons8-html-48.png";
 import "./animatedLangs.css";
 
 function AnimatedLangs() {
     return (
-        <div>
+        <div className="heritageContainer">
             <div className="osTitleContainer">
                 <p className="osTitle">Operating Systems</p>
             </div>
@@ -31,12 +33,16 @@ function AnimatedLangs() {
                     <p className="macWord">Mac</p>
                 </div>
                 <div className="osSub">
-                    <img src={ubuntu} alt="ubuntu" className="ubuntu" />
+                    <div className="ubuntuWrapper">
+                        <img src={ubuntu} alt="ubuntu" className="ubuntu" />
+                    </div>
                     <p className="ubuWord">Ubuntu</p>
                 </div>
-                <div className="osSub">
-                    <img src={fire} alt="fire" className="fire" />
-                    <img src={kali} alt="kali" className="kali" />
+                <div className="osSubKali">
+                    <div className="kaliWrapper">
+                        <img src={fire} alt="fire" className="fire" />
+                        <img src={kali} alt="kali" className="kali" />
+                    </div>
                     <p className="kaliWord">Kali</p>
                 </div>
                 <div className="osSub">
@@ -69,14 +75,62 @@ function AnimatedLangs() {
             <div className="langContainer">
                 <div className="langSub">
                     <img src={javaScript} alt="javaScript" className="javaScript" />
-                    <p className="langWord">JavaScript</p>
+                    <p className="javaWord">JavaScript</p>
+                </div>
+                <div className="langSub">
+                    <img src={css} alt="css" className="cssPic" />
+                    <p className="cssWord">CSS</p>
+                </div>
+                <div className="langSub">
+                    <img src={html} alt="html" className="htmlPic" />
+                    <p className="htmlWord">HTML</p>
                 </div>
                 <div className="langSub">
                     <img src={python} alt="python" className="python" />
-                    <p className="langWord">Python</p>
+                    <p className="pyWord">Python</p>
                 </div>
             </div>
-
+            <div className="frameworkTitleContainer">
+                <p className="frameworkTitle">Frameworks and Tools</p>
+            </div>
+            {/*Frameworks*/}
+            <div className="frameworkContainer">
+                <div className="frameworkSub">
+                    <div className="reaccionWrapper">
+                        <img src={reaccion} alt="reaccion" className="reaccion" />
+                    </div>
+                    <p className="reaccionWord">React</p>
+                </div>
+                <div className="frameworkSub">
+                    <img src={node} alt="node" className="node" />
+                    <p className="nodeWord">Node</p>
+                </div>
+                <div className="frameworkSub">
+                    <img src={mongo} alt="mongo" className="mongo" />
+                    <p className="mongoWord">MongoDB</p>
+                </div>
+                <div className="frameworkSub">
+                    <img src={vue} alt="vue" className="vue" />
+                    <p className="vueWord">Vue</p>
+                </div>
+            </div>
+            {/*Frameworks Continued*/}
+            <div className="frameworkContainer2">
+                <div className="frameworkSub">
+                    <img src={airtable} alt="airtable" className="airtable" />
+                    <p className="airtableWord">Airtable</p>
+                </div>
+                <div className="frameworkSub">
+                    <img src={zap} alt="zap" className="zap" />
+                    <p className="zapWord">Zapier</p>
+                </div>
+                <div className="frameworkSub">
+                    <div className="gptWrapper">
+                        <img src={gpt} alt="gpt" className="gpt" />
+                    </div>
+                    <p className="gptWord">OpenAI</p>
+                </div>
+            </div>
         </div>
     );
 };
