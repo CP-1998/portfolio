@@ -1,6 +1,7 @@
 {
   "name": "new_proj",
   "version": "0.1.0",
+  "homepage": "https://CP-1998.github.io/portfolio",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -15,6 +16,8 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.25.9"
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "gh-pages": "^6.3.0"
   }
 }
