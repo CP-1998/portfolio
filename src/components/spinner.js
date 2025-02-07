@@ -14,7 +14,7 @@ function Spinner() {
     }, []);
 
     const override: CSSProperties = {
-        animation: 'react-spinners-ClipLoader-clip 3s linear infinite normal, fadeIn 9.5s linear forwards',
+        animation: 'react-spinners-ClipLoader-clip 3s linear infinite normal, fade 6s linear forwards',
         borderColor: 'rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) transparent',
         width: '150px',
         height: '150px',

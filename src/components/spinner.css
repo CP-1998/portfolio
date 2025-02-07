@@ -1,14 +1,10 @@
-.spinner {
-    animation: fadeIn 10s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    0%,
-    100% {
-      opacity: 0;
-    }
-  
-    50% {
-      opacity: 1;
-    }
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
   }
+
+  50% {
+    opacity: 1;
+  }
+}

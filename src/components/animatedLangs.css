@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: auto;
     margin: 0;
     padding: 0;
@@ -14,7 +15,6 @@ html, body {
     padding-top: 2rem;
     background-color: rgb(255, 255, 255);
     animation: fadeLangs 4s linear;
-    pointer-events: none;
 }
 
 .osContainer,
@@ -54,13 +54,14 @@ html, body {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 .osTitleContainer {
-    margin-top: 8rem;
+    margin-top: 12rem;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -74,7 +75,8 @@ html, body {
     color: transparent;
     text-align: center;
     margin-top: 0.5rem;
-    background-image: radial-gradient(black, rgb(255, 255, 255), black);
+    background-image: radial-gradient(black, rgb(25, 170, 206), black);
+
     background-clip: text;
     background-size: 1000% 1000%;
     animation: rainbow 20s linear infinite, fadeLangs 4s linear;
@@ -281,7 +283,7 @@ html, body {
     color: transparent;
     text-align: center;
     margin-top: 0.5rem;
-    background-image: radial-gradient(rgb(11, 15, 230), yellow);
+    background-image: radial-gradient(rgb(11, 88, 230), yellow);
     background-clip: text;
     background-size: 500% 500%;
     animation: rainbow 3s linear infinite;
@@ -320,7 +322,7 @@ html, body {
     color: transparent;
     text-align: center;
     margin-top: 0.5rem;
-    background-image: radial-gradient(rgb(255, 255, 255),rgb(17, 206, 27), rgb(255, 255, 255));
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(17, 206, 27), rgb(255, 255, 255));
     background-clip: text;
     background-size: 500% 500%;
     animation: rainbow 4s linear infinite;
@@ -346,16 +348,24 @@ html, body {
     color: transparent;
     text-align: center;
     margin-top: 0.5rem;
-    background-image: radial-gradient(rgb(0, 0, 0), rgb(255, 255, 255), rgb(0, 0, 0));
+    background-image: radial-gradient(rgb(0, 0, 0), rgb(30, 182, 88), rgb(0, 0, 0));
     background-clip: text;
     background-size: 500% 500%;
     animation: rainbow 4s linear infinite;
 }
 
 @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cliWord {
@@ -543,6 +553,54 @@ html, body {
     animation: bounceZontally 2s linear infinite;
 }
 
+.contactButton {
+    background-color: #04AA6D;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    margin: 4px 2px;
+    margin-bottom: 2rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #04AA6D, #00C9FF, #92FE9D, #00C9FF, #04AA6D);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+.contactButton:hover {
+    animation: gradientAnimation 3s linear infinite;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 @keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
@@ -589,55 +647,100 @@ html, body {
 }
 
 @media (max-width: 1200px) {
-    .osSub, .cliSub, .langSub, .frameworkSub {
+
+    .osSub,
+    .cliSub,
+    .langSub,
+    .frameworkSub {
         width: 150px;
     }
 
-    .osTitle, .cliTitle, .langTitle, .frameworkTitle {
+    .osTitle,
+    .cliTitle,
+    .langTitle,
+    .frameworkTitle {
         font-size: 1.5rem;
     }
 
-    .ubuntu, .mac, .powershell, .zsh, .git, .windows, .kali {
+    .ubuntu,
+    .mac,
+    .powershell,
+    .zsh,
+    .git,
+    .windows,
+    .kali {
         width: 20%;
     }
 }
 
 @media (max-width: 768px) {
-    .osContainer, .cliContainer, .langContainer, .frameworkContainer, .frameworkContainer2 {
+
+    .osContainer,
+    .cliContainer,
+    .langContainer,
+    .frameworkContainer,
+    .frameworkContainer2 {
         flex-direction: column;
     }
 
-    .osSub, .cliSub, .langSub, .frameworkSub {
+    .osSub,
+    .cliSub,
+    .langSub,
+    .frameworkSub {
         width: 100%;
     }
 
-    .osTitle, .cliTitle, .langTitle, .frameworkTitle {
+    .osTitle,
+    .cliTitle,
+    .langTitle,
+    .frameworkTitle {
         font-size: 1.2rem;
     }
 
     .heritageContainer {
-        padding-top: 5rem; /* Add padding to the top to prevent clipping */
+        padding-top: 5rem;
+        /* Add padding to the top to prevent clipping */
     }
 
-    .ubuntu, .mac, .powershell, .zsh, .git, .windows, .kali {
+    .ubuntu,
+    .mac,
+    .powershell,
+    .zsh,
+    .git,
+    .windows,
+    .kali {
         width: 30%;
     }
 }
 
 @media (max-width: 480px) {
-    .osSub, .cliSub, .langSub, .frameworkSub {
+
+    .osSub,
+    .cliSub,
+    .langSub,
+    .frameworkSub {
         width: 80%;
     }
 
-    .osTitle, .cliTitle, .langTitle, .frameworkTitle {
+    .osTitle,
+    .cliTitle,
+    .langTitle,
+    .frameworkTitle {
         font-size: 1rem;
     }
 
     .heritageContainer {
-        padding-top: 120rem; /* Add more padding to the top for very small screens */
+        padding-top: 120rem;
+        /* Add more padding to the top for very small screens */
     }
 
-    .ubuntu, .mac, .powershell, .zsh, .git, .windows, .kali {
+    .ubuntu,
+    .mac,
+    .powershell,
+    .zsh,
+    .git,
+    .windows,
+    .kali {
         width: 40%;
     }
 }

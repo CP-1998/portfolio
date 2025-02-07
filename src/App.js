@@ -3,6 +3,7 @@ import Spinner from './components/spinner';
 import './components/animatedLangs';
 import React, { useState, useEffect } from 'react';
 import AnimatedLangs from './components/animatedLangs';
+import ContactMe from './components/contactMe';
 
 function App() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -14,7 +15,9 @@ function App() {
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const [percentBool, setPercentBool] = useState(false);
   const [spinningTrue, setSpinningTrue] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
   const [langVis, setLangVis] = useState(false);
+  const [hiThere, setHiThere] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,7 +41,7 @@ function App() {
       await sleep(8400);
       setPercentBool(true);
       for (let i = 0; i <= 100; i++) {
-        await sleep(70);
+        await sleep(40);
         setPercentWatch(i);
       };
     };
@@ -48,14 +51,16 @@ function App() {
 
   useEffect(() => {
     async function destroyLoading() {
-      await sleep(18500);
+      await sleep(15000);
       setPercentBool(false);
       setSpinningTrue(false);
-      await sleep(1000);
-      setLangVis(true);
-    };
+      await sleep(400);
+      if (!langVis) {
+        setLangVis(true);
+      }
+    }
     destroyLoading();
-  }, [percentBool]);
+  }, []);
 
   useEffect(() => {
     const helloElement = document.getElementById('destructibleHello');
@@ -65,6 +70,15 @@ function App() {
       helloElement.classList.add('hello');
     }
   }, [currentPhraseIndex]);
+
+  const handleHideLangs = () => {
+    setFadeOut(true);
+    setTimeout(() => {
+      setLangVis(false);
+      setFadeOut(false);
+      setHiThere(true);
+    }, 1000); // Match the duration of the fade-out animation
+  };
 
   return (
     <div className="App">
@@ -80,7 +94,11 @@ function App() {
         <div>
           {percentBool && <p className="percentWatch" id="percentElem">{percentWatch}%</p>}
           {spinningTrue && <Spinner id="spinnerObj"/>}
-          {langVis && <AnimatedLangs />}
+          {langVis && <AnimatedLangs langVis={langVis}
+              setLangVis={setLangVis}
+              fadeOut={fadeOut}
+              handleHideLangs={handleHideLangs}/>}
+             {hiThere && < ContactMe />}
         </div>
         <p className="hello" id='destructibleHello'>{phrases[currentPhraseIndex]}</p>
       </div>

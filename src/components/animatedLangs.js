@@ -3,7 +3,6 @@ import kali from "../assets/Simpleicons-Team-Simple-Kali-linux.512.png";
 import airtable from "../assets/airtable_icon.png";
 import gpt from "../assets/icons8-chatgpt-50.png";
 import git from "../assets/icons8-git-48.png";
-import theHub from "../assets/icons8-github-32.png";
 import javaScript from "../assets/icons8-javascript (1).gif";
 import mongo from "../assets/icons8-mongo-db-48.png";
 import node from "../assets/icons8-nodejs-48.png";
@@ -19,10 +18,11 @@ import fire from "../assets/game of thrones fire Sticker by Red Giant.gif";
 import css from "../assets/icons8-css-48.png";
 import html from "../assets/icons8-html-48.png";
 import "./animatedLangs.css";
+import React from 'react';
 
-function AnimatedLangs() {
+function AnimatedLangs({ fadeOut, handleHideLangs }) {
     return (
-        <div className="heritageContainer">
+        <div className={`heritageContainer ${fadeOut ? 'fade-out' : ''}`}>
             <div className="osTitleContainer">
                 <p className="osTitle">Operating Systems</p>
             </div>
@@ -131,6 +131,7 @@ function AnimatedLangs() {
                     <p className="gptWord">OpenAI</p>
                 </div>
             </div>
+            <button className="contactButton" onClick={handleHideLangs}>Contact Me</button>
         </div>
     );
 };
