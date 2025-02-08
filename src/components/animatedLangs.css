@@ -647,21 +647,12 @@ body {
 }
 
 @media (max-width: 1200px) {
-
     .osSub,
     .cliSub,
     .langSub,
     .frameworkSub {
-        width: 150px;
+        width: 180px;
     }
-
-    .osTitle,
-    .cliTitle,
-    .langTitle,
-    .frameworkTitle {
-        font-size: 1.5rem;
-    }
-
     .ubuntu,
     .mac,
     .powershell,
@@ -669,39 +660,27 @@ body {
     .git,
     .windows,
     .kali {
-        width: 20%;
+        width: 22%;
     }
 }
 
+/* For screens up to 768px (tablets) */
 @media (max-width: 768px) {
-
     .osContainer,
     .cliContainer,
     .langContainer,
     .frameworkContainer,
     .frameworkContainer2 {
         flex-direction: column;
+        align-items: center;
     }
-
     .osSub,
     .cliSub,
     .langSub,
     .frameworkSub {
-        width: 100%;
+        width: 150px;
+        margin: 0 auto;
     }
-
-    .osTitle,
-    .cliTitle,
-    .langTitle,
-    .frameworkTitle {
-        font-size: 1.2rem;
-    }
-
-    .heritageContainer {
-        padding-top: 5rem;
-        /* Add padding to the top to prevent clipping */
-    }
-
     .ubuntu,
     .mac,
     .powershell,
@@ -711,29 +690,37 @@ body {
     .kali {
         width: 30%;
     }
+    .osTitle,
+    .cliTitle,
+    .langTitle,
+    .frameworkTitle {
+        font-size: 1.2rem;
+    }
 }
 
+/* For screens up to 480px (mobile) */
 @media (max-width: 480px) {
-
+    .heritageContainer {
+        min-height: 100vh;
+        /* Increase the top padding for safe area and extra offset */
+        padding: calc(90rem + env(safe-area-inset-top)) 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    /* Increase top margin for the OS container to avoid clipping */
+    .osContainer {
+        margin-top: 3rem;
+    }
     .osSub,
     .cliSub,
     .langSub,
     .frameworkSub {
         width: 80%;
+        max-width: 120px;
+        margin: 0 auto;
     }
-
-    .osTitle,
-    .cliTitle,
-    .langTitle,
-    .frameworkTitle {
-        font-size: 1rem;
-    }
-
-    .heritageContainer {
-        padding-top: 120rem;
-        /* Add more padding to the top for very small screens */
-    }
-
     .ubuntu,
     .mac,
     .powershell,
@@ -742,5 +729,11 @@ body {
     .windows,
     .kali {
         width: 40%;
+    }
+    .osTitle,
+    .cliTitle,
+    .langTitle,
+    .frameworkTitle {
+        font-size: 1rem;
     }
 }
