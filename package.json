@@ -2,7 +2,7 @@
   "name": "new_proj",
   "version": "0.1.0",
   "homepage": "https://CP-1998.github.io/portfolio",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
