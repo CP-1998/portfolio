@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.808cfbab.css",
+    "main.js": "/portfolio/static/js/main.6315bb01.js",
+    "static/js/488.dec756a9.chunk.js": "/portfolio/static/js/488.dec756a9.chunk.js",
+    "static/media/RESUME 2025.pdf": "/portfolio/static/media/RESUME 2025.932aa1c47f3ef99ed6f8.pdf",
+    "static/media/tisI.jpg": "/portfolio/static/media/tisI.b52fc6c3d4ae26182245.jpg",
+    "static/media/game of thrones fire Sticker by Red Giant.gif": "/portfolio/static/media/game of thrones fire Sticker by Red Giant.a568ff664bd7e81ec44c.gif",
+    "static/media/MacOS_logo.png": "/portfolio/static/media/MacOS_logo.37243a7f87013421b795.png",
+    "static/media/airtable_icon.png": "/portfolio/static/media/airtable_icon.215875b0f0995e719718.png",
+    "static/media/Powershell.png": "/portfolio/static/media/Powershell.c915b6d893722a272055.png",
+    "static/media/icons8-python (1).gif": "/portfolio/static/media/icons8-python (1).b437742745fe3d50f050.gif",
+    "static/media/icons8-gmail.gif": "/portfolio/static/media/icons8-gmail.4be85454ad74b93219e2.gif",
+    "index.html": "/portfolio/index.html",
+    "main.808cfbab.css.map": "/portfolio/static/css/main.808cfbab.css.map",
+    "main.6315bb01.js.map": "/portfolio/static/js/main.6315bb01.js.map",
+    "488.dec756a9.chunk.js.map": "/portfolio/static/js/488.dec756a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.808cfbab.css",
+    "static/js/main.6315bb01.js"
+  ]
+}
